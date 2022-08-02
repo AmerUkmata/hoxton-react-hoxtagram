@@ -13,7 +13,7 @@ function App() {
     let match: any = copyPostImages.find((copyPost) => post.id === copyPost.id);
     match.likes++;
     setPostImages(copyPostImages);
-    fetch(`http://localhost:3006/images/${match.id}`, {
+    fetch(`http://localhost:3001/images/${match.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -22,7 +22,7 @@ function App() {
     });
   }
   function addComment(content: string, imageId: number) {
-    fetch("http://localhost:3006/comments", {
+    fetch("http://localhost:3001/comments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ function App() {
   }
 
   function createPost(title: string, image: string) {
-    fetch("http://localhost:3006/images", {
+    fetch("http://localhost:3001/images", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -50,11 +50,11 @@ function App() {
   }
 
   useEffect(() => {
-    fetch("http://localhost:3006/comments")
+    fetch("http://localhost:3001/comments")
       .then((resp) => resp.json())
       .then((comments) => setPostComments(comments));
 
-    fetch("http://localhost:3006/images")
+    fetch("http://localhost:3001/images")
       .then((resp) => resp.json())
       .then((images) => setPostImages(images));
   }, []);
