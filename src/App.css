@@ -145,3 +145,48 @@ img {
 .comment-form.image-card .comment-button {
   font-size: 1rem;
 }
+.add-comment-form {
+  padding: 0px 10px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+}
+.add-comment-input {
+  outline: none;
+  font-size: 15px;
+  border: none;
+  width: 100%;
+}
+.post-comment-input {
+  background-color: transparent;
+  border: none;
+  font-weight: bolder;
+  color: rgb(73, 116, 216);
+  cursor: pointer;
+}
+.create-port-unit {
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+}
+.create-port-form {
+  height: 120px;
+  width: 350px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: grid;
+  padding: 10px 10px;
+  justify-content: start;
+  gap: 10px;
+  justify-items: start;
+}
+.create-port-form input {
+  border: none;
+  outline: none;
+  color: black;
+}
